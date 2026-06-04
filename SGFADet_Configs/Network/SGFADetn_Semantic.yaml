@@ -1,0 +1,60 @@
+
+# SGFADet: SAM-Guided Feature Adaptive Learning for UAV-Based Road Crack Segmentation
+# Semantic segmentation model based on the SGFADet pipeline.
+# The model implements: frozen SAM prior branch + SFC + SAF + ATAH.
+# Use with task=semantic and binary masks where crack pixels are 1 and background is 0.
+
+nc: 1 # crack foreground class; background is implicit for BCE/Dice binary semantic segmentation
+stride_probe_size: 32 # faster CPU model-build probe; real training still uses imgsz argument
+scale: n
+scales:
+  # [depth, width, max_channels]
+  n: [0.50, 0.25, 1024]
+  s: [0.50, 0.50, 1024]
+  m: [0.50, 1.00, 512]
+  l: [1.00, 1.00, 512]
+  x: [1.00, 1.50, 512]
+
+# Backbone
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, nn.Identity, []] # 0: preserve original input for dual-path backbone
+
+  # Frozen SAM prior branch. If SGFADET_SAM_CKPT or --sam-checkpoint is not set, it uses a deterministic edge/RGB prior.
+  - [0, 1, SAMFrozenPyramid, [[64, 128, 256], vit_b, null, True, auto, 1024]] # 1: returns [SAM-P3, SAM-P4, SAM-P5]
+  - [1, 1, Index, [64, 0]] # 2: SAM prior P3/8
+  - [1, 1, Index, [128, 1]] # 3: SAM prior P4/16
+  - [1, 1, Index, [256, 2]] # 4: SAM prior P5/32
+
+  # RGB backbone: Conv-C3k2-SPPF-C2PSA with SFC calibration
+  - [0, 1, Conv, [64, 3, 2]] # 5-P1/2
+  - [-1, 1, Conv, [128, 3, 2]] # 6-P2/4
+  - [-1, 2, C3k2, [256, False, 0.25]] # 7
+  - [-1, 1, Conv, [256, 3, 2]] # 8-P3/8
+  - [-1, 2, C3k2, [512, False, 0.25]] # 9
+  - [-1, 1, SFC, [512, 16]] # 10: SFC at P3
+  - [[10, 2], 1, SAF, [512, 16]] # 11: SAF(P3 RGB, SAM prior)
+
+  - [-1, 1, Conv, [512, 3, 2]] # 12-P4/16
+  - [-1, 2, C3k2, [512, True]] # 13
+  - [-1, 1, SFC, [512, 16]] # 14: SFC at P4
+  - [[14, 3], 1, SAF, [512, 16]] # 15: SAF(P4 RGB, SAM prior)
+
+  - [-1, 1, Conv, [1024, 3, 2]] # 16-P5/32
+  - [-1, 2, C3k2, [1024, True]] # 17
+  - [-1, 1, SPPF, [1024, 5, 3, True]] # 18
+  - [-1, 2, C2PSA, [1024]] # 19
+  - [-1, 1, SFC, [1024, 16]] # 20: SFC at P5
+  - [[20, 4], 1, SAF, [1024, 16]] # 21: SAF(P5 RGB, SAM prior)
+
+# Neck + ATAH semantic head
+head:
+  - [-1, 1, nn.Upsample, [None, 2, nearest]]
+  - [[-1, 15], 1, Concat, [1]] # 23: cat fused P4
+  - [-1, 2, C3k2, [512, True]] # 24
+
+  - [-1, 1, nn.Upsample, [None, 2, nearest]]
+  - [[-1, 11], 1, Concat, [1]] # 26: cat fused P3
+  - [-1, 2, C3k2, [256, True]] # 27 (P3/8)
+
+  - [[27, 24, 21], 1, ATAHSegment, [nc]] # 28: task-aware semantic alignment head

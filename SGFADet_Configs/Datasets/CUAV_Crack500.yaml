@@ -1,0 +1,12 @@
+# CUAV-Crack500 semantic segmentation template for SGFADet.
+# Paper split: 400 train / 100 test. If you do not have a separate validation set,
+# set val: images/test for reproducibility of the reported train-test split.
+
+path: /path/to/CUAV-Crack500
+train: images/train
+val: images/test
+test: images/test
+masks_dir: masks
+nc: 1
+names:
+  0: crack
