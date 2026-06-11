@@ -268,6 +268,48 @@ runs/SGFADet/predict/masks/
 
 ---
 
-## 11. 许可证与来源说明
+## 11. 实验图片说明
+
+`images/` 目录中存放了论文实验部分对应的 6 张可视化图片，主要用于展示 SGFADet 的训练收敛趋势、模块消融效果以及裂缝分割可视化表现。各图片可直接在 README 中查看，也可作为论文实验结果复现后的对照材料。
+
+### 11.1 Recall 训练曲线
+
+该图比较 DeepLabv3+、DefNet、DeepCrack 与 SGFADet 在 CrackTree260 数据集上的 Recall 随训练 epoch 变化的趋势。SGFADet 在训练早期快速提升，并在后期稳定收敛到较高水平；最终 Recall 为 0.8465，高于对比方法，说明该模型对裂缝前景像素具有更强的捕获能力，有助于降低细小裂缝与弱对比裂缝的漏检。
+
+![Recall training curve](images/recall.png)
+
+### 11.2 Precision 训练曲线
+
+该图展示 DeepLabv3+、DefNet、DeepCrack 与 SGFADet 在 CrackTree260 数据集上的 Precision 训练变化。SGFADet 在收敛阶段保持较高且相对稳定的精确率，最终 Precision 为 0.8093；结合 Recall 曲线可见，SGFADet 在裂缝像素召回与背景误检抑制之间取得了更均衡的表现。
+
+![Precision training curve](images/Precision.png)
+
+### 11.3 消融实验柱状对比图
+
+该图以柱状图形式展示 Baseline、`+SAM+SFC`、`+SAF`、`+ATAH`、`+SAF+ATAH` 以及完整 SGFADet 在 Precision、Recall、F1 和 mIoU 四项指标上的对比。完整模型 `+SAM+SAF+SFC+ATAH` 在四项指标上均取得最高结果，分别达到 72.53%、66.47%、68.73% 和 73.97%，说明 SAM 先验、SFC 显著特征校准、SAF 自适应融合和 ATAH 任务感知对齐具有互补作用。
+
+![Ablation bar comparison](images/zzt.png)
+
+### 11.4 消融实验指标变化趋势图
+
+该图以折线形式进一步展示不同模块组合下四项指标的变化趋势。相较于 Baseline，完整 SGFADet 的 Precision 从 64.35% 提升至 72.53%，Recall 从 58.28% 提升至 66.47%，F1 从 59.76% 提升至 68.73%，mIoU 从 66.57% 提升至 73.97%。趋势图更直观地表明，多模块协同能够稳定提升裂缝识别、区域重叠质量和整体分割性能。
+
+![Ablation metric trend](images/zxt.png)
+
+### 11.5 裂缝分割结果可视化对比
+
+该图给出了原始道路裂缝图像及不同方法的二值分割结果，包括 SGFADet、DeepCrack、DefNet、DTrC-Net、BSCS-Net、DeepLabv3+ 和 SegNet。SGFADet 能够更完整地保留裂缝主干、细小分支和弯曲结构，在细长裂缝、多分支裂缝以及弱对比场景中表现出更好的连续性和边界一致性；其他方法更容易出现局部断裂、细节丢失或背景误检。
+
+![Crack segmentation visualization comparison](images/fgt.png)
+
+### 11.6 裂缝区域特征响应热力图对比
+
+该图展示不同方法在裂缝区域上的特征响应热力图。SGFADet 的高响应区域更加集中于真实裂缝位置，背景区域响应较弱，说明其能够有效聚焦裂缝相关结构并抑制路面纹理、阴影和噪声干扰。与二值分割结果结合来看，该热力图进一步验证了 SGFADet 在裂缝连续性、细节保持和复杂背景抑制方面的稳定性。
+
+![Crack heatmap comparison](images/rlt.png)
+
+---
+
+## 12. 许可证与来源说明
 
 本工程基于用户上传的 YOLO/Ultralytics 源码改造，保留其 AGPL-3.0 许可文件，并新增 SGFADet 网络模块、配置、训练、验证、测试、预测和评估代码。使用、修改或发布时请同时遵守原始工程和本工程中的许可证要求。
