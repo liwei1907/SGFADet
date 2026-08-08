@@ -42,9 +42,9 @@ The default constructor is `SGFADet(variant="full", fusion_stages="345", backbon
 
 `train.py` writes every selected variant into `config.json`, preventing a control run from being reported as the complete model.
 
-## Wording that must remain checkpoint-compatible
+## Checkpoint-compatible implementation invariants
 
-The uploaded v2 implementation is the numerical authority for the reported, already-completed runs. It uses BatchNorm in the ATAH shared `Conv` blocks, an EMA warm-up ramp capped at 0.999, and seeded but non-bitwise-deterministic CUDA/cuDNN execution in `run_matrix.py`. These details must not be changed to GroupNorm, constant-from-step-one EMA, or deterministic kernels without retraining and re-benchmarking. Clarify any conflicting manuscript shorthand before final submission.
+The uploaded v2 implementation is the numerical authority for the reported, already-completed runs. It uses BatchNorm in the ATAH shared `Conv` blocks, an EMA warm-up ramp capped at 0.999, and seeded but non-bitwise-deterministic CUDA/cuDNN execution in `run_matrix.py`. Changing these implementation details requires retraining and re-benchmarking.
 
 ## Evaluation contract
 

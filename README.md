@@ -236,7 +236,7 @@ Model weights, datasets, and local run directories are intentionally excluded fr
 
 ### Checkpoint-compatibility note
 
-The numerical model and training path are intentionally kept compatible with the uploaded v2 source because the revised results were not retrained. In particular, the released ATAH stem uses the v2 `Conv` block (Conv-BN-SiLU), EMA uses a warm-up ramp whose configured maximum is 0.999, and `run_matrix.py` retains the seeded but non-bitwise-deterministic CUDA setting used for the reported runs. If a manuscript draft states GroupNorm, constant-from-step-one EMA, or bitwise deterministic training, correct that wording or retrain before changing these settings; silently changing them would invalidate checkpoint compatibility and the reported results.
+The numerical model and training path are intentionally kept compatible with the uploaded v2 source because the revised results were not retrained. The released ATAH stem uses the v2 `Conv` block (Conv-BN-SiLU), EMA uses a warm-up ramp whose configured maximum is 0.999, and `run_matrix.py` retains the seeded but non-bitwise-deterministic CUDA setting used for the reported runs. Changing these settings requires retraining and re-benchmarking.
 
 ## Citation
 
