@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this implementation, please cite the SGFADet paper. Update the venue and DOI after acceptance."
+title: "SGFADet: Semantic-Prior-Guided Feature-Adaptive Learning for Aerial Road-Crack Segmentation"
+type: software
+authors:
+  - family-names: Tan
+    given-names: Pengcheng
+  - family-names: Liu
+    given-names: Ting
+  - family-names: Li
+    given-names: Jiayao
+  - family-names: Li
+    given-names: Wei
+repository-code: "https://github.com/liwei1907/SGFADet"
+license: AGPL-3.0-only
+version: "2.0.0-revision"
+date-released: 2026-08-09

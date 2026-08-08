@@ -1,315 +1,242 @@
-# SGFADet: SAM-Guided Feature Adaptive Learning for UAV-Based Road Crack Segmentation
+# SGFADet: Semantic-Prior-Guided Feature-Adaptive Learning for Aerial Road-Crack Segmentation
 
-本仓库是 **SGFADet** 的源码工程，用于无人机道路裂缝二值语义分割。代码以用户提供的 YOLO/Ultralytics 语义分割训练框架为底座，按照论文网络结构重组为 SGFADet 工程：
+Official PyTorch implementation and reproducibility package for **SGFADet**. The repository follows the revised paper: an RGB detail pathway is calibrated by SFC, a frozen MobileSAM TinyViT encoder supplies a reusable semantic prior, SAF transfers that prior at P3/P4/P5, and ATAH aligns semantic-region and boundary-geometry prediction.
 
-> RGB 细节增强 → SAM 先验引导 → 多尺度自适应融合 → 任务感知预测对齐
+> RGB detail hierarchy -> SFC calibration -> frozen MobileSAM prior -> three-scale SAF -> PAN/FPN aggregation -> ATAH -> dense crack mask
 
-核心模块包括：
+The code in this branch supersedes the earlier Ultralytics prototype. It does not use an edge/Sobel substitute for the paper model and does not retain CrackLS315 as experimental evidence.
 
-- **SAM Prior Branch**：冻结 SAM image encoder，输出 P3/P4/P5 多尺度语义先验；未提供 SAM 权重时使用冻结 RGB+Sobel prior 作为可运行 fallback。
-- **SFC, Salient Feature Calibrator**：嵌入 RGB 主干，对裂缝显著结构、边界和局部纹理进行双分支、双门控、残差校准。
-- **SAF, SAM-guided Adaptive Fusion**：在 P3/P4/P5 关键尺度上自适应融合 RGB 特征与 SAM 先验。
-- **Neck**：通过 Upsample、Concat、C3k2 完成多尺度层级聚合。
-- **ATAH, Adaptive Task-Aware Alignment Head**：通过语义分支与几何分支对齐，输出裂缝分割 logits。
+## Paper-code contract
 
----
+| Revised-paper item | Implementation |
+|---|---|
+| RGB backbone, C3K2, SPPF, C2PSA-like attention | `sgfadet.py`: `SGFADet`, `C3K2`, `SPPF`, `PSABlock` |
+| SFC, Eqs. (6)-(10) | `sgfadet.py`: `SFC` |
+| SAF at P3/P4/P5, Eqs. (1)-(5) | `sgfadet.py`: `SAF`, `SGFADet.saf3/saf4/saf5` |
+| Frozen MobileSAM TinyViT semantic prior | `precompute_sam.py`, `sam_adapter.py` |
+| ATAH, Eqs. (11)-(14) | `sgfadet.py`: `ATAH`, `SemanticAlignment`, `GeometryAlignment` |
+| Main, semantic, boundary, and four side-output losses, Eq. (15) | `losses.py`: `sgfadet_loss` |
+| Fixed grouped train/validation/test protocol | `splits/*.json`, `segmentation_common.py`, `audit_splits.py` |
+| Five-seed training and validation-only selection | `run_matrix.py`, `train.py`, `aggregate_runs.py` |
+| Boundary F1, HD95/nHD95, clDice, Thin-Re | `metrics.py`, `evaluate_checkpoint.py` |
+| Efficiency and robustness analysis | `benchmark.py`, `robustness.py` |
 
-## 1. 源码目录
+See [`docs/PAPER_CODE_ALIGNMENT.md`](docs/PAPER_CODE_ALIGNMENT.md) for the operator-level mapping and [`configs/paper_protocol.json`](configs/paper_protocol.json) for the machine-readable protocol.
 
-```text
-SGFADet/
-├── README.md
-├── LICENSE
-├── pyproject.toml
-├── SGFADet_Network/
-│   ├── SGFADet_Model.py
-│   ├── Backbone/
-│   │   ├── SAM_Prior_Branch.py
-│   │   └── RGB_Backbone_with_SFC.py
-│   ├── Modules/
-│   │   └── SFC_Salient_Feature_Calibrator.py
-│   ├── Fusion/
-│   │   └── SAF_SAM_Guided_Adaptive_Fusion.py
-│   ├── Neck/
-│   │   └── MultiScale_Feature_Aggregation_Neck.py
-│   └── Head/
-│       └── ATAH_Adaptive_Task_Aware_Alignment_Head.py
-├── SGFADet_Configs/
-│   ├── Network/
-│   │   └── SGFADetn_Semantic.yaml
-│   └── Datasets/
-│       ├── Generic_Crack_Semantic.yaml
-│       ├── CUAV_Crack500.yaml
-│       ├── CrackTree260.yaml
-│       └── CrackLS315.yaml
-├── SGFADet_Experiments/
-│   ├── Train/train_SGFADet.py
-│   ├── Validation/validate_SGFADet.py
-│   ├── Test/test_SGFADet.py
-│   ├── Inference/predict_SGFADet.py
-│   ├── Evaluation/evaluate_SGFADet_masks.py
-│   └── QuickCheck/quick_check_SGFADet.py
-└── ultralytics/
-    └── 已集成 SGFADet 语义分割训练、验证、预测和指标计算的底层引擎
-```
-
-说明：`SGFADet_Network` 和 `SGFADet_Configs` 是论文结构对应的显式源码层；`ultralytics/` 是为了复用训练器、验证器、数据加载、loss、日志与导出能力而保留的底层工程代码。
-
----
-
-## 2. 网络结构对应关系
-
-| 论文结构 | 源码位置 | 作用 |
-|---|---|---|
-| Backbone / SAM Prior Branch | `SGFADet_Network/Backbone/SAM_Prior_Branch.py`，底层实现为 `ultralytics/nn/modules/sgfadet.py::SAMFrozenPyramid` | 冻结 SAM 先验分支，输出 P3/P4/P5 prior |
-| Backbone / RGB Branch + SFC | `SGFADet_Network/Backbone/RGB_Backbone_with_SFC.py`，`SGFADet_Network/Modules/SFC_Salient_Feature_Calibrator.py` | RGB 主干与显著特征校准 |
-| SAF | `SGFADet_Network/Fusion/SAF_SAM_Guided_Adaptive_Fusion.py` | RGB 与 SAM 先验自适应融合 |
-| Neck | `SGFADet_Network/Neck/MultiScale_Feature_Aggregation_Neck.py`，结构定义在 `SGFADet_Configs/Network/SGFADetn_Semantic.yaml` | 多尺度特征聚合 |
-| ATAH | `SGFADet_Network/Head/ATAH_Adaptive_Task_Aware_Alignment_Head.py` | 预测端语义/几何任务感知对齐 |
-| SGFADet 完整结构 | `SGFADet_Configs/Network/SGFADetn_Semantic.yaml` | Conv-C3k2-SPPF-C2PSA + SFC + SAF + Neck + ATAH |
-
-底层可执行模块集中在：
+## Repository layout
 
 ```text
-ultralytics/nn/modules/sgfadet.py
+.
+|-- sgfadet.py                    # network: RGB path, SFC, SAF, neck, ATAH
+|-- sam_adapter.py                # cached/online frozen MobileSAM and controls
+|-- losses.py                     # Eq. (15)
+|-- train.py                      # single-dataset/single-seed training
+|-- run_matrix.py                 # two datasets x five seeds
+|-- evaluate_checkpoint.py        # region and structural metrics
+|-- predict.py                    # masks and overlays for new images
+|-- benchmark.py                  # parameters, operations, latency and memory
+|-- robustness.py                 # post-freeze perturbation analysis
+|-- segmentation_common.py        # dataset inventory and split loading
+|-- splits/                       # frozen grouped manifests
+|-- configs/paper_protocol.json   # paper-aligned constants
+|-- docs/                         # data and reproducibility notes
+`-- tests/                        # repository-contract checks
 ```
 
-该文件实现 `SAMFrozenPyramid`、`SFC`、`SAF`、`ATAH`、`ATAHSegment`，并已在 `ultralytics/nn/modules/__init__.py` 与 `ultralytics/nn/tasks.py` 中注册。
+The scripts whose names include `controls`, `cross_dataset`, or `structural` reproduce the component, semantic-prior, architecture, topology, and transfer analyses added during revision. They are not required for a standard single-model inference workflow.
 
----
+## Installation
 
-## 3. 环境安装
+The paper experiments used an NVIDIA RTX 3090 (24 GB), 640 x 640 inputs, and CUDA-enabled PyTorch. Python 3.10 or 3.11 is recommended.
 
-建议使用 Python 3.10 或更高版本，并安装 PyTorch。进入源码根目录后执行：
+1. Create and activate an isolated environment.
+2. Install a CUDA build of PyTorch and TorchVision using the command generated at <https://pytorch.org/get-started/locally/>.
+3. Install the remaining dependencies and the official MobileSAM runtime:
 
 ```bash
-pip install -e .
+python -m pip install -r requirements.txt
+python -m pip install "git+https://github.com/ChaoningZhang/MobileSAM.git"
 ```
 
-可选安装真实 SAM 分支依赖：
-
-```bash
-pip install segment-anything
-```
-
-真实 SAM checkpoint 不随源码分发。训练或验证时通过 `--sam-checkpoint` 指定，例如：
-
-```bash
---sam-checkpoint /path/to/sam_vit_b_01ec64.pth
-```
-
-未指定 SAM checkpoint 时，代码会自动使用冻结 RGB+Sobel prior，便于先验证代码流程。
-
----
-
-## 4. 数据集格式
-
-推荐使用语义分割 PNG mask 格式：
+Download the official `mobile_sam.pt` checkpoint separately. The checkpoint used for the paper has SHA-256:
 
 ```text
-dataset_root/
-├── images/
-│   ├── train/*.jpg|png
-│   ├── val/*.jpg|png
-│   └── test/*.jpg|png
-└── masks/
-    ├── train/*.png
-    ├── val/*.png
-    └── test/*.png
+6dbb90523a35330fedd7f1d3dfc66f995213d81b29a5ca8108dbcdd4e37d6c2f
 ```
 
-每张图像对应一个同名 mask，例如：
+The repository does not redistribute third-party datasets or checkpoints.
+
+## Datasets and fixed splits
+
+The public sources are:
+
+- [UAV-CrackX-Datasets](https://github.com/SHAN-JH/UAV-CrackX-Datasets), using the 400 annotated x4 images referred to as **UAV-Crack500** in the paper.
+- [DeepCrack](https://github.com/qinnzou/DeepCrack), using **CrackTree260**.
+
+Expected local layout:
 
 ```text
-images/train/0001.jpg  ->  masks/train/0001.png
+<data-root>/
+|-- UAV-Crack500/
+|   |-- leftImg8bit/train/UAV-CrackX4/*.jpg
+|   `-- gtFine/train/UAV-CrackX4/*.png
+`-- CrackTree260/
+    |-- CrackTree260/*.jpg
+    `-- gt/*.bmp
 ```
 
-二值裂缝 mask 约定：
+The committed manifests define:
 
-```text
-0   = background
-1   = crack
-255 = ignore，可选
-```
+| Dataset | Train | Validation | Test | Isolation rule |
+|---|---:|---:|---:|---|
+| UAV-Crack500 | 282 | 70 | 48 | neighboring crops remain in ten-frame temporal blocks; the held-out test set is one continuous block |
+| CrackTree260 | 182 | 39 | 39 | conservative acquisition/scene sequence groups visually audited against road/background characteristics; no group crosses a split |
 
-如果你的标注是 `0/255`，可直接用于独立评估脚本；训练时建议转换为 `0/1` 或确认数据加载逻辑按二值前景处理。
+UAV-Crack500's public x4 images originate from one flight sequence, so the protocol is described as **temporal-block isolation**, not flight-disjoint testing. CrackTree260 has no official scene identifiers; the manifest therefore records the conservative audited grouping used in the revision.
 
-按实际路径修改以下配置：
+CrackLS315 is excluded because the available local copy did not provide traceable acquisition/scene identifiers sufficient for the same leakage-audited grouped protocol, and no code-aligned grouped five-run result was available. Including it would apply a weaker validation standard than the two retained datasets.
 
-```text
-SGFADet_Configs/Datasets/Generic_Crack_Semantic.yaml
-SGFADet_Configs/Datasets/CUAV_Crack500.yaml
-SGFADet_Configs/Datasets/CrackTree260.yaml
-SGFADet_Configs/Datasets/CrackLS315.yaml
-```
-
----
-
-## 5. 快速前向检查
-
-无需数据集，构建 SGFADet 并进行一次随机前向：
+Audit the frozen manifests before training:
 
 ```bash
-python SGFADet_Experiments/QuickCheck/quick_check_SGFADet.py \
-  --device cpu \
-  --imgsz 256 \
-  --sam-backend edge
+python audit_splits.py --dataset uav_crack500 --data-root <data-root> --output artifacts/audits/uav_crack500.json
+python audit_splits.py --dataset cracktree260 --data-root <data-root> --output artifacts/audits/cracktree260.json
 ```
 
-预期输出类似：
+Additional details are in [`docs/DATASETS.md`](docs/DATASETS.md).
 
-```text
-Output shape: (1, 1, 32, 32)
-```
+## Reproducing the paper protocol
 
----
+### 1. Precompute the frozen MobileSAM prior
 
-## 6. 训练
-
-论文默认实验设置已写入训练脚本：`imgsz=640`、`epochs=100`、`batch=4`、`optimizer=Adam`、`lr0=5e-4`、`weight_decay=3e-5`，并启用旋转、水平翻转和垂直翻转增强。
+The main runs cache the frozen TinyViT neck feature once for every image. Spatial augmentation is applied synchronously to RGB, mask, and cached prior during training.
 
 ```bash
-python SGFADet_Experiments/Train/train_SGFADet.py \
-  --data SGFADet_Configs/Datasets/CUAV_Crack500.yaml \
-  --model SGFADet_Configs/Network/SGFADetn_Semantic.yaml \
-  --sam-checkpoint /path/to/sam_vit_b_01ec64.pth \
-  --device 0 \
-  --project runs/SGFADet \
-  --name CUAV_Crack500_SGFADet
+python precompute_sam.py \
+  --dataset all \
+  --data-root <data-root> \
+  --cache-root <cache-root> \
+  --sam-checkpoint <path/to/mobile_sam.pt>
 ```
 
-强制使用真实 SAM：
+The generated manifest records the runtime, input size, feature shape, checkpoint filename, and checkpoint SHA-256.
+
+### 2. Run the two-dataset, five-seed matrix
 
 ```bash
---sam-backend sam
+python run_matrix.py \
+  --data-root <data-root> \
+  --cache-root <cache-root> \
+  --run-root runs/paper_main
 ```
 
-强制使用轻量 fallback：
+Frozen defaults:
+
+- seeds: 42, 123, 3407, 2025, 2026;
+- input: 640 x 640; batch size: 6; evaluation batch size: 4;
+- 200 epochs; AdamW; initial learning rate 5e-4; weight decay 3e-5;
+- five warm-up epochs, cosine decay, gradient-norm clipping at 5;
+- mean of class-balanced BCE and Dice for every segmentation term;
+- loss weights: semantic 0.20, boundary 0.10, four-side-output mean 0.15;
+- EMA decay 0.999; fixed threshold 0.5;
+- checkpoint selected exclusively by validation mIoU; test evaluated once after selection.
+
+For one dataset and seed, call `train.py` directly. Run `python train.py --help` for every option.
+
+### 3. Aggregate the five runs
 
 ```bash
---sam-backend edge
+python aggregate_runs.py \
+  --runs \
+    runs/paper_main/uav_crack500/seed_42 \
+    runs/paper_main/uav_crack500/seed_123 \
+    runs/paper_main/uav_crack500/seed_3407 \
+    runs/paper_main/uav_crack500/seed_2025 \
+    runs/paper_main/uav_crack500/seed_2026 \
+  --output-dir artifacts/uav_crack500_summary
 ```
 
----
+Repeat with the five CrackTree260 directories. `plot_multiseed_curves.py` generates the mean validation-mIoU curve with sample-standard-deviation shading.
 
-## 7. 验证与测试
-
-验证集：
+### 4. Evaluate structural metrics
 
 ```bash
-python SGFADet_Experiments/Validation/validate_SGFADet.py \
-  --weights runs/SGFADet/CUAV_Crack500_SGFADet/weights/best.pt \
-  --data SGFADet_Configs/Datasets/CUAV_Crack500.yaml \
-  --device 0 \
-  --save-masks
+python evaluate_checkpoint.py \
+  --dataset uav_crack500 \
+  --checkpoint runs/paper_main/uav_crack500/seed_42/best.pt \
+  --data-root <data-root> \
+  --cache-root <cache-root> \
+  --subset test \
+  --output-dir artifacts/uav_seed42_test \
+  --save-predictions
 ```
 
-测试集：
+The evaluator reports foreground Precision/Recall/F1, foreground/background mIoU, Boundary F1 with two-pixel tolerance, HD95, diagonal-normalized HD95, clDice, and recall of target-skeleton pixels whose local width is at most three pixels.
+
+For prediction on new images, the script computes the frozen MobileSAM prior online and applies the validation-selected decoder:
 
 ```bash
-python SGFADet_Experiments/Test/test_SGFADet.py \
-  --weights runs/SGFADet/CUAV_Crack500_SGFADet/weights/best.pt \
-  --data SGFADet_Configs/Datasets/CUAV_Crack500.yaml \
-  --device 0 \
-  --save-masks
+python predict.py \
+  --checkpoint runs/paper_main/uav_crack500/seed_42/best.pt \
+  --sam-checkpoint <path/to/mobile_sam.pt> \
+  --source <image-or-directory> \
+  --output-dir outputs/predictions
 ```
 
-日志输出指标：
-
-```text
-Precision, Recall, F1, mIoU, PixAcc
-```
-
-其中 `Precision`、`Recall`、`F1` 默认针对 crack foreground；二值 `mIoU` 采用 `mean(IoU_background, IoU_crack)`。
-
----
-
-## 8. 独立 mask 指标评估
-
-如果已保存预测 PNG，可直接计算论文四项指标：
+### 5. Run the controlled analyses
 
 ```bash
-python SGFADet_Experiments/Evaluation/evaluate_SGFADet_masks.py \
-  --pred-dir runs/SGFADet/test/masks \
-  --gt-dir /path/to/CUAV-Crack500/masks/test \
-  --save-json runs/SGFADet/test/metrics.json \
-  --save-csv runs/SGFADet/test/per_image_metrics.csv
+python run_component_controls.py --data-root <data-root> --cache-root <cache-root> --run-root runs/component_controls --dataset uav_crack500
+python run_structural_5seed.py --run-root runs/paper_main --output-root artifacts/structural --data-root <data-root> --cache-root <cache-root>
+python run_cross_dataset.py --run-root runs/paper_main --output-root artifacts/cross_dataset --data-root <data-root> --cache-root <cache-root>
+python run_prior_and_architecture_controls.py --data-root <data-root> --cache-root <cache-root> --sam-checkpoint <path/to/mobile_sam.pt> --run-root runs/extended_controls
 ```
 
----
+These scripts preserve the same split, optimizer, epoch budget, validation-only selection, threshold, and one-shot test policy unless a script explicitly labels an analysis as a post-freeze evaluation.
 
-## 9. 预测
+## Reported revised-paper results
+
+Mean +/- sample standard deviation over five independent runs:
+
+| Dataset | Precision | Recall | F1 | mIoU |
+|---|---:|---:|---:|---:|
+| UAV-Crack500 | 0.7482 +/- 0.0113 | 0.8190 +/- 0.0092 | 0.7673 +/- 0.0046 | 0.7838 +/- 0.0033 |
+| CrackTree260 | 0.5505 +/- 0.0041 | 0.7614 +/- 0.0069 | 0.6322 +/- 0.0018 | 0.7292 +/- 0.0010 |
+
+Structural results from the same five test checkpoints:
+
+| Dataset | Boundary F1 | HD95 | nHD95 | clDice | Thin-Re |
+|---|---:|---:|---:|---:|---:|
+| UAV-Crack500 | 0.8052 +/- 0.0068 | 52.40 +/- 2.37 | 0.0579 +/- 0.0026 | 0.8240 +/- 0.0065 | 0.8110 +/- 0.0174 |
+| CrackTree260 | 0.9622 +/- 0.0017 | 3.16 +/- 0.77 | 0.0035 +/- 0.0009 | 0.6652 +/- 0.0017 | 0.9504 +/- 0.0041 |
+
+On the paper's RTX 3090 benchmark, the complete model contains 25.59 M parameters and requires 136.52 GFLOPs per 640 x 640 forward pass under the stated two-FLOPs-per-MAC convention. End-to-end MobileSAM-plus-SGFADet inference reached 28.11 FPS with 439.55 MiB peak allocated memory; cached-prior decoder inference reached 76.43 FPS with 331.97 MiB. Re-run `benchmark.py` on the target system rather than treating these hardware-dependent values as universal.
+
+## Quick checks
+
+The static repository contract does not require PyTorch:
 
 ```bash
-python SGFADet_Experiments/Inference/predict_SGFADet.py \
-  --weights runs/SGFADet/CUAV_Crack500_SGFADet/weights/best.pt \
-  --source /path/to/images_or_video \
-  --device 0 \
-  --save-overlay
+python -m unittest discover -s tests -p "test_*.py"
+python -m compileall -q .
 ```
 
-原始类别 mask 默认保存到：
+After installing PyTorch/TorchVision, run a small random forward pass:
 
-```text
-runs/SGFADet/predict/masks/
+```bash
+python quick_check.py --device cpu --image-size 128
 ```
 
----
+CUDA is required for the declared 640 x 640 training and benchmark protocol.
 
-## 10. 复现实验数据集
+## Checkpoints, logs, and provenance
 
-论文实验涉及以下数据集模板：
+Model weights, datasets, and local run directories are intentionally excluded from Git. A publication release should attach the five selected checkpoints per dataset, `epoch_metrics.csv`, `config.json`, `final_metrics.json`, split-audit reports, and aggregate summaries as release assets or in an archival record. Every generated configuration records the split SHA-256, seed, runtime, parameter count, and validation/test policy.
 
-- `CUAV_Crack500.yaml`
-- `CrackTree260.yaml`
-- `CrackLS315.yaml`
+## Citation
 
-请将 YAML 中的 `path`、`train`、`val`、`test` 修改为你的实际数据集路径后再运行。
+The paper is under revision. Use [`CITATION.cff`](CITATION.cff) for the current title and author list; update the venue, year, pages, and DOI after acceptance.
 
----
+## License
 
-## 11. 实验图片说明
-
-`images/` 目录中存放了论文实验部分对应的 6 张可视化图片，主要用于展示 SGFADet 的训练收敛趋势、模块消融效果以及裂缝分割可视化表现。各图片可直接在 README 中查看，也可作为论文实验结果复现后的对照材料。
-
-### 11.1 Recall 训练曲线
-
-该图比较 DeepLabv3+、DefNet、DeepCrack 与 SGFADet 在 CrackTree260 数据集上的 Recall 随训练 epoch 变化的趋势。SGFADet 在训练早期快速提升，并在后期稳定收敛到较高水平；最终 Recall 为 0.8465，高于对比方法，说明该模型对裂缝前景像素具有更强的捕获能力，有助于降低细小裂缝与弱对比裂缝的漏检。
-
-![Recall training curve](images/recall.png)
-
-### 11.2 Precision 训练曲线
-
-该图展示 DeepLabv3+、DefNet、DeepCrack 与 SGFADet 在 CrackTree260 数据集上的 Precision 训练变化。SGFADet 在收敛阶段保持较高且相对稳定的精确率，最终 Precision 为 0.8093；结合 Recall 曲线可见，SGFADet 在裂缝像素召回与背景误检抑制之间取得了更均衡的表现。
-
-![Precision training curve](images/Precision.png)
-
-### 11.3 消融实验柱状对比图
-
-该图以柱状图形式展示 Baseline、`+SAM+SFC`、`+SAF`、`+ATAH`、`+SAF+ATAH` 以及完整 SGFADet 在 Precision、Recall、F1 和 mIoU 四项指标上的对比。完整模型 `+SAM+SAF+SFC+ATAH` 在四项指标上均取得最高结果，分别达到 72.53%、66.47%、68.73% 和 73.97%，说明 SAM 先验、SFC 显著特征校准、SAF 自适应融合和 ATAH 任务感知对齐具有互补作用。
-
-![Ablation bar comparison](images/zzt.png)
-
-### 11.4 消融实验指标变化趋势图
-
-该图以折线形式进一步展示不同模块组合下四项指标的变化趋势。相较于 Baseline，完整 SGFADet 的 Precision 从 64.35% 提升至 72.53%，Recall 从 58.28% 提升至 66.47%，F1 从 59.76% 提升至 68.73%，mIoU 从 66.57% 提升至 73.97%。趋势图更直观地表明，多模块协同能够稳定提升裂缝识别、区域重叠质量和整体分割性能。
-
-![Ablation metric trend](images/zxt.png)
-
-### 11.5 裂缝分割结果可视化对比
-
-该图给出了原始道路裂缝图像及不同方法的二值分割结果，包括 SGFADet、DeepCrack、DefNet、DTrC-Net、BSCS-Net、DeepLabv3+ 和 SegNet。SGFADet 能够更完整地保留裂缝主干、细小分支和弯曲结构，在细长裂缝、多分支裂缝以及弱对比场景中表现出更好的连续性和边界一致性；其他方法更容易出现局部断裂、细节丢失或背景误检。
-
-![Crack segmentation visualization comparison](images/fgt.png)
-
-### 11.6 裂缝区域特征响应热力图对比
-
-该图展示不同方法在裂缝区域上的特征响应热力图。SGFADet 的高响应区域更加集中于真实裂缝位置，背景区域响应较弱，说明其能够有效聚焦裂缝相关结构并抑制路面纹理、阴影和噪声干扰。与二值分割结果结合来看，该热力图进一步验证了 SGFADet 在裂缝连续性、细节保持和复杂背景抑制方面的稳定性。
-
-![Crack heatmap comparison](images/rlt.png)
-
----
-
-## 12. 许可证与来源说明
-
-本工程基于用户上传的 YOLO/Ultralytics 源码改造，保留其 AGPL-3.0 许可文件，并新增 SGFADet 网络模块、配置、训练、验证、测试、预测和评估代码。使用、修改或发布时请同时遵守原始工程和本工程中的许可证要求。
+This repository is released under the [GNU Affero General Public License v3.0](LICENSE). MobileSAM and the two datasets retain their own licenses and terms; users must obtain them from their original sources.

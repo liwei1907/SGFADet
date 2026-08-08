@@ -1,0 +1,2029 @@
+{
+  "dataset": "uav_crack500",
+  "protocol": "group-disjoint fixed 70/15/15 split",
+  "grouping_rule": "All crops from neighboring DJI frames stay in the same 10-frame temporal scene block",
+  "seed": 2026,
+  "total_count": 400,
+  "train_count": 282,
+  "validation_count": 70,
+  "test_count": 48,
+  "group_counts": {
+    "train": 7,
+    "validation": 4,
+    "test": 1
+  },
+  "global_positive_pixel_ratio": 0.05481725560594608,
+  "split_positive_pixel_ratio": {
+    "train": 0.054891485586879875,
+    "validation": 0.05978363567649282,
+    "test": 0.04713851686507937
+  },
+  "exact_duplicate_sets": [],
+  "note": "The test split is never used for checkpoint or threshold selection.",
+  "train": [
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154707_0002_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154707_0002_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154707_0002_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154707_0002_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154707_0002_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154707_0002_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154707_0002_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154707_0002_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154713_0005_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154713_0005_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154713_0005_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154713_0005_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154715_0006_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154717_0007_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154719_0008_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154721_0009_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_000X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154753_0025_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154753_0025_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154753_0025_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154753_0025_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154753_0025_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154753_0025_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154755_0026_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154757_0027_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154759_0028_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154759_0028_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154759_0028_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154759_0028_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154759_0028_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154759_0028_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_002X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154845_0051_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154845_0051_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154845_0051_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154845_0051_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154845_0051_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154845_0051_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154847_0052_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154847_0052_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154847_0052_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154847_0052_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154849_0053_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154849_0053_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154851_0054_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154851_0054_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154851_0054_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154851_0054_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154853_0055_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154853_0055_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154853_0055_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154853_0055_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154901_0059_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154901_0059_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154901_0059_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154901_0059_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_005X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154923_0070_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154925_0071_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154927_0072_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154929_0073_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154931_0074_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154933_0075_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154935_0076_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154937_0077_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154939_0078_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154941_0079_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_007X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154943_0080_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154945_0081_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154947_0082_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154949_0083_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154951_0084_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154953_0085_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154955_0086_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154955_0086_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154955_0086_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154955_0086_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154957_0087_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154959_0088_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155001_0089_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_008X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155003_0090_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155005_0091_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155007_0092_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155009_0093_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155011_0094_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155013_0095_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155013_0095_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155013_0095_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155013_0095_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155013_0095_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155013_0095_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155013_0095_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155013_0095_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155015_0096_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155017_0097_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155019_0098_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155021_0099_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_009X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155337_0197_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155339_0198_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155341_0199_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_019X"
+    }
+  ],
+  "validation": [
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154723_0010_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154723_0010_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_001X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154725_0011_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154725_0011_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_001X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154725_0011_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154725_0011_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_001X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154725_0011_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154725_0011_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_001X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154733_0015_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154733_0015_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_001X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154735_0016_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154735_0016_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_001X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154805_0031_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154805_0031_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_003X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154903_0060_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154903_0060_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154905_0061_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154907_0062_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154909_0063_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154909_0063_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154909_0063_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154909_0063_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154909_0063_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154909_0063_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154909_0063_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154909_0063_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154911_0064_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154911_0064_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154911_0064_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154911_0064_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154911_0064_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154911_0064_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154913_0065_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154915_0066_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154917_0067_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154919_0068_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_8_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_8_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015154921_0069_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_006X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155343_0200_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155343_0200_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_020X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155343_0200_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155343_0200_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_020X"
+    }
+  ],
+  "test": [
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155023_0100_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_0_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_0_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_4_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_4_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155025_0101_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_12_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_12_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_7_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155027_0102_Z.JPG_7_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_11_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_11_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_15_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_15_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_2_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_2_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_3_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_3_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155029_0103_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_10_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_10_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_13_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_13_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_9_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155031_0104_Z.JPG_9_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155033_0105_Z.JPG_14_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155033_0105_Z.JPG_14_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155033_0105_Z.JPG_5_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155033_0105_Z.JPG_5_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155033_0105_Z.JPG_6_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155033_0105_Z.JPG_6_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    },
+    {
+      "image": "UAV-Crack500/leftImg8bit/train/UAV-CrackX4/937956_DJI_20231015155035_0106_Z.JPG_1_z.jpg",
+      "mask": "UAV-Crack500/gtFine/train/UAV-CrackX4/937956_DJI_20231015155035_0106_Z.JPG_1_z.png",
+      "group": "937956_DJI_20231015_TEMPORAL_010X"
+    }
+  ]
+}

@@ -1,0 +1,1329 @@
+{
+  "dataset": "cracktree260",
+  "protocol": "group-disjoint fixed 70/15/15 split",
+  "grouping_rule": "Conservative filename-sequence blocks visually audited against road/background scene characteristics; no official scene IDs were available",
+  "seed": 2026,
+  "total_count": 260,
+  "train_count": 182,
+  "validation_count": 39,
+  "test_count": 39,
+  "group_counts": {
+    "train": 26,
+    "validation": 12,
+    "test": 9
+  },
+  "global_positive_pixel_ratio": 0.004237820512820515,
+  "split_positive_pixel_ratio": {
+    "train": 0.0042301342465405,
+    "validation": 0.004201399275878443,
+    "test": 0.004310110992402659
+  },
+  "exact_duplicate_sets": [],
+  "note": "The test split is never used for checkpoint or threshold selection.",
+  "train": [
+    {
+      "image": "CrackTree260/CrackTree260/6192.jpg",
+      "mask": "CrackTree260/gt/6192.bmp",
+      "group": "NUM_619x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6193.jpg",
+      "mask": "CrackTree260/gt/6193.bmp",
+      "group": "NUM_619x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6194.jpg",
+      "mask": "CrackTree260/gt/6194.bmp",
+      "group": "NUM_619x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6195.jpg",
+      "mask": "CrackTree260/gt/6195.bmp",
+      "group": "NUM_619x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6196.jpg",
+      "mask": "CrackTree260/gt/6196.bmp",
+      "group": "NUM_619x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6197.jpg",
+      "mask": "CrackTree260/gt/6197.bmp",
+      "group": "NUM_619x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6198.jpg",
+      "mask": "CrackTree260/gt/6198.bmp",
+      "group": "NUM_619x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6199.jpg",
+      "mask": "CrackTree260/gt/6199.bmp",
+      "group": "NUM_619x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6200.jpg",
+      "mask": "CrackTree260/gt/6200.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6201.jpg",
+      "mask": "CrackTree260/gt/6201.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6202.jpg",
+      "mask": "CrackTree260/gt/6202.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6203.jpg",
+      "mask": "CrackTree260/gt/6203.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6204.jpg",
+      "mask": "CrackTree260/gt/6204.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6205.jpg",
+      "mask": "CrackTree260/gt/6205.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6206.jpg",
+      "mask": "CrackTree260/gt/6206.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6207.jpg",
+      "mask": "CrackTree260/gt/6207.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6208.jpg",
+      "mask": "CrackTree260/gt/6208.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6209.jpg",
+      "mask": "CrackTree260/gt/6209.bmp",
+      "group": "NUM_620x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6210.jpg",
+      "mask": "CrackTree260/gt/6210.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6211.jpg",
+      "mask": "CrackTree260/gt/6211.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6212.jpg",
+      "mask": "CrackTree260/gt/6212.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6213.jpg",
+      "mask": "CrackTree260/gt/6213.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6214.jpg",
+      "mask": "CrackTree260/gt/6214.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6215.jpg",
+      "mask": "CrackTree260/gt/6215.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6216.jpg",
+      "mask": "CrackTree260/gt/6216.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6217.jpg",
+      "mask": "CrackTree260/gt/6217.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6218.jpg",
+      "mask": "CrackTree260/gt/6218.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6219.jpg",
+      "mask": "CrackTree260/gt/6219.bmp",
+      "group": "NUM_621x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6220.jpg",
+      "mask": "CrackTree260/gt/6220.bmp",
+      "group": "NUM_622x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6221.jpg",
+      "mask": "CrackTree260/gt/6221.bmp",
+      "group": "NUM_622x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6222.jpg",
+      "mask": "CrackTree260/gt/6222.bmp",
+      "group": "NUM_622x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6223.jpg",
+      "mask": "CrackTree260/gt/6223.bmp",
+      "group": "NUM_622x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6224.jpg",
+      "mask": "CrackTree260/gt/6224.bmp",
+      "group": "NUM_622x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6225.jpg",
+      "mask": "CrackTree260/gt/6225.bmp",
+      "group": "NUM_622x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6226.jpg",
+      "mask": "CrackTree260/gt/6226.bmp",
+      "group": "NUM_622x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6227.jpg",
+      "mask": "CrackTree260/gt/6227.bmp",
+      "group": "NUM_622x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6229.jpg",
+      "mask": "CrackTree260/gt/6229.bmp",
+      "group": "NUM_622x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6230.jpg",
+      "mask": "CrackTree260/gt/6230.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6231.jpg",
+      "mask": "CrackTree260/gt/6231.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6232.jpg",
+      "mask": "CrackTree260/gt/6232.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6233.jpg",
+      "mask": "CrackTree260/gt/6233.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6234.jpg",
+      "mask": "CrackTree260/gt/6234.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6235.jpg",
+      "mask": "CrackTree260/gt/6235.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6236.jpg",
+      "mask": "CrackTree260/gt/6236.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6237.jpg",
+      "mask": "CrackTree260/gt/6237.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6238.jpg",
+      "mask": "CrackTree260/gt/6238.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6239.jpg",
+      "mask": "CrackTree260/gt/6239.bmp",
+      "group": "NUM_623x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6240.jpg",
+      "mask": "CrackTree260/gt/6240.bmp",
+      "group": "NUM_624x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6242.jpg",
+      "mask": "CrackTree260/gt/6242.bmp",
+      "group": "NUM_624x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6243.jpg",
+      "mask": "CrackTree260/gt/6243.bmp",
+      "group": "NUM_624x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6247.jpg",
+      "mask": "CrackTree260/gt/6247.bmp",
+      "group": "NUM_624x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6251.jpg",
+      "mask": "CrackTree260/gt/6251.bmp",
+      "group": "NUM_625x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6252.jpg",
+      "mask": "CrackTree260/gt/6252.bmp",
+      "group": "NUM_625x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6254.jpg",
+      "mask": "CrackTree260/gt/6254.bmp",
+      "group": "NUM_625x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6256.jpg",
+      "mask": "CrackTree260/gt/6256.bmp",
+      "group": "NUM_625x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6257.jpg",
+      "mask": "CrackTree260/gt/6257.bmp",
+      "group": "NUM_625x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6258.jpg",
+      "mask": "CrackTree260/gt/6258.bmp",
+      "group": "NUM_625x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6259.jpg",
+      "mask": "CrackTree260/gt/6259.bmp",
+      "group": "NUM_625x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6260.jpg",
+      "mask": "CrackTree260/gt/6260.bmp",
+      "group": "NUM_626x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6261.jpg",
+      "mask": "CrackTree260/gt/6261.bmp",
+      "group": "NUM_626x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6262.jpg",
+      "mask": "CrackTree260/gt/6262.bmp",
+      "group": "NUM_626x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6263.jpg",
+      "mask": "CrackTree260/gt/6263.bmp",
+      "group": "NUM_626x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6264.jpg",
+      "mask": "CrackTree260/gt/6264.bmp",
+      "group": "NUM_626x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6265.jpg",
+      "mask": "CrackTree260/gt/6265.bmp",
+      "group": "NUM_626x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6266.jpg",
+      "mask": "CrackTree260/gt/6266.bmp",
+      "group": "NUM_626x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6268.jpg",
+      "mask": "CrackTree260/gt/6268.bmp",
+      "group": "NUM_626x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6269.jpg",
+      "mask": "CrackTree260/gt/6269.bmp",
+      "group": "NUM_626x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6270.jpg",
+      "mask": "CrackTree260/gt/6270.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6271.jpg",
+      "mask": "CrackTree260/gt/6271.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6272.jpg",
+      "mask": "CrackTree260/gt/6272.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6273.jpg",
+      "mask": "CrackTree260/gt/6273.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6274.jpg",
+      "mask": "CrackTree260/gt/6274.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6275.jpg",
+      "mask": "CrackTree260/gt/6275.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6276.jpg",
+      "mask": "CrackTree260/gt/6276.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6277.jpg",
+      "mask": "CrackTree260/gt/6277.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6278.jpg",
+      "mask": "CrackTree260/gt/6278.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6279.jpg",
+      "mask": "CrackTree260/gt/6279.bmp",
+      "group": "NUM_627x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6280.jpg",
+      "mask": "CrackTree260/gt/6280.bmp",
+      "group": "NUM_628x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6281.jpg",
+      "mask": "CrackTree260/gt/6281.bmp",
+      "group": "NUM_628x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6282.jpg",
+      "mask": "CrackTree260/gt/6282.bmp",
+      "group": "NUM_628x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6283.jpg",
+      "mask": "CrackTree260/gt/6283.bmp",
+      "group": "NUM_628x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6284.jpg",
+      "mask": "CrackTree260/gt/6284.bmp",
+      "group": "NUM_628x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6285.jpg",
+      "mask": "CrackTree260/gt/6285.bmp",
+      "group": "NUM_628x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6286.jpg",
+      "mask": "CrackTree260/gt/6286.bmp",
+      "group": "NUM_628x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6287.jpg",
+      "mask": "CrackTree260/gt/6287.bmp",
+      "group": "NUM_628x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6288.jpg",
+      "mask": "CrackTree260/gt/6288.bmp",
+      "group": "NUM_628x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6310.jpg",
+      "mask": "CrackTree260/gt/6310.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6311.jpg",
+      "mask": "CrackTree260/gt/6311.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6312.jpg",
+      "mask": "CrackTree260/gt/6312.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6313.jpg",
+      "mask": "CrackTree260/gt/6313.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6314.jpg",
+      "mask": "CrackTree260/gt/6314.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6315.jpg",
+      "mask": "CrackTree260/gt/6315.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6316.jpg",
+      "mask": "CrackTree260/gt/6316.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6317.jpg",
+      "mask": "CrackTree260/gt/6317.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6318.jpg",
+      "mask": "CrackTree260/gt/6318.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6319.jpg",
+      "mask": "CrackTree260/gt/6319.bmp",
+      "group": "NUM_631x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6321.jpg",
+      "mask": "CrackTree260/gt/6321.bmp",
+      "group": "NUM_632x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6322.jpg",
+      "mask": "CrackTree260/gt/6322.bmp",
+      "group": "NUM_632x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6323.jpg",
+      "mask": "CrackTree260/gt/6323.bmp",
+      "group": "NUM_632x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6324.jpg",
+      "mask": "CrackTree260/gt/6324.bmp",
+      "group": "NUM_632x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6325.jpg",
+      "mask": "CrackTree260/gt/6325.bmp",
+      "group": "NUM_632x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6326.jpg",
+      "mask": "CrackTree260/gt/6326.bmp",
+      "group": "NUM_632x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6327.jpg",
+      "mask": "CrackTree260/gt/6327.bmp",
+      "group": "NUM_632x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6328.jpg",
+      "mask": "CrackTree260/gt/6328.bmp",
+      "group": "NUM_632x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6329.jpg",
+      "mask": "CrackTree260/gt/6329.bmp",
+      "group": "NUM_632x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6330.jpg",
+      "mask": "CrackTree260/gt/6330.bmp",
+      "group": "NUM_633x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6331.jpg",
+      "mask": "CrackTree260/gt/6331.bmp",
+      "group": "NUM_633x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6332.jpg",
+      "mask": "CrackTree260/gt/6332.bmp",
+      "group": "NUM_633x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6333.jpg",
+      "mask": "CrackTree260/gt/6333.bmp",
+      "group": "NUM_633x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6334.jpg",
+      "mask": "CrackTree260/gt/6334.bmp",
+      "group": "NUM_633x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6335.jpg",
+      "mask": "CrackTree260/gt/6335.bmp",
+      "group": "NUM_633x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6336.jpg",
+      "mask": "CrackTree260/gt/6336.bmp",
+      "group": "NUM_633x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6620.jpg",
+      "mask": "CrackTree260/gt/6620.bmp",
+      "group": "NUM_662x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6623.jpg",
+      "mask": "CrackTree260/gt/6623.bmp",
+      "group": "NUM_662x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6624.jpg",
+      "mask": "CrackTree260/gt/6624.bmp",
+      "group": "NUM_662x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6625.jpg",
+      "mask": "CrackTree260/gt/6625.bmp",
+      "group": "NUM_662x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6626.jpg",
+      "mask": "CrackTree260/gt/6626.bmp",
+      "group": "NUM_662x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6641.jpg",
+      "mask": "CrackTree260/gt/6641.bmp",
+      "group": "NUM_664x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6645.jpg",
+      "mask": "CrackTree260/gt/6645.bmp",
+      "group": "NUM_664x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6647.jpg",
+      "mask": "CrackTree260/gt/6647.bmp",
+      "group": "NUM_664x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6675.jpg",
+      "mask": "CrackTree260/gt/6675.bmp",
+      "group": "NUM_667x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6677.jpg",
+      "mask": "CrackTree260/gt/6677.bmp",
+      "group": "NUM_667x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6682.jpg",
+      "mask": "CrackTree260/gt/6682.bmp",
+      "group": "NUM_668x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6684.jpg",
+      "mask": "CrackTree260/gt/6684.bmp",
+      "group": "NUM_668x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6710.jpg",
+      "mask": "CrackTree260/gt/6710.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6711.jpg",
+      "mask": "CrackTree260/gt/6711.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6712.jpg",
+      "mask": "CrackTree260/gt/6712.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6713.jpg",
+      "mask": "CrackTree260/gt/6713.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6714.jpg",
+      "mask": "CrackTree260/gt/6714.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6715.jpg",
+      "mask": "CrackTree260/gt/6715.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6716.jpg",
+      "mask": "CrackTree260/gt/6716.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6717.jpg",
+      "mask": "CrackTree260/gt/6717.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6718.jpg",
+      "mask": "CrackTree260/gt/6718.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6719.jpg",
+      "mask": "CrackTree260/gt/6719.bmp",
+      "group": "NUM_671x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6720.jpg",
+      "mask": "CrackTree260/gt/6720.bmp",
+      "group": "NUM_672x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6721.jpg",
+      "mask": "CrackTree260/gt/6721.bmp",
+      "group": "NUM_672x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6722.jpg",
+      "mask": "CrackTree260/gt/6722.bmp",
+      "group": "NUM_672x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6723.jpg",
+      "mask": "CrackTree260/gt/6723.bmp",
+      "group": "NUM_672x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6724.jpg",
+      "mask": "CrackTree260/gt/6724.bmp",
+      "group": "NUM_672x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6725.jpg",
+      "mask": "CrackTree260/gt/6725.bmp",
+      "group": "NUM_672x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6726.jpg",
+      "mask": "CrackTree260/gt/6726.bmp",
+      "group": "NUM_672x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6727.jpg",
+      "mask": "CrackTree260/gt/6727.bmp",
+      "group": "NUM_672x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6728.jpg",
+      "mask": "CrackTree260/gt/6728.bmp",
+      "group": "NUM_672x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6740.jpg",
+      "mask": "CrackTree260/gt/6740.bmp",
+      "group": "NUM_674x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6741.jpg",
+      "mask": "CrackTree260/gt/6741.bmp",
+      "group": "NUM_674x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6749.jpg",
+      "mask": "CrackTree260/gt/6749.bmp",
+      "group": "NUM_674x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6440.JPG",
+      "mask": "CrackTree260/gt/DSCN6440.bmp",
+      "group": "DSCN_644x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6441.JPG",
+      "mask": "CrackTree260/gt/DSCN6441.bmp",
+      "group": "DSCN_644x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6442.JPG",
+      "mask": "CrackTree260/gt/DSCN6442.bmp",
+      "group": "DSCN_644x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6443.JPG",
+      "mask": "CrackTree260/gt/DSCN6443.bmp",
+      "group": "DSCN_644x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6444.JPG",
+      "mask": "CrackTree260/gt/DSCN6444.bmp",
+      "group": "DSCN_644x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6445.JPG",
+      "mask": "CrackTree260/gt/DSCN6445.bmp",
+      "group": "DSCN_644x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6446.JPG",
+      "mask": "CrackTree260/gt/DSCN6446.bmp",
+      "group": "DSCN_644x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6447.JPG",
+      "mask": "CrackTree260/gt/DSCN6447.bmp",
+      "group": "DSCN_644x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6761.JPG",
+      "mask": "CrackTree260/gt/DSCN6761.bmp",
+      "group": "DSCN_676x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6764.JPG",
+      "mask": "CrackTree260/gt/DSCN6764.bmp",
+      "group": "DSCN_676x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6765.JPG",
+      "mask": "CrackTree260/gt/DSCN6765.bmp",
+      "group": "DSCN_676x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6766.JPG",
+      "mask": "CrackTree260/gt/DSCN6766.bmp",
+      "group": "DSCN_676x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6767.JPG",
+      "mask": "CrackTree260/gt/DSCN6767.bmp",
+      "group": "DSCN_676x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6768.JPG",
+      "mask": "CrackTree260/gt/DSCN6768.bmp",
+      "group": "DSCN_676x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6769.JPG",
+      "mask": "CrackTree260/gt/DSCN6769.bmp",
+      "group": "DSCN_676x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6770.JPG",
+      "mask": "CrackTree260/gt/DSCN6770.bmp",
+      "group": "DSCN_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6771.JPG",
+      "mask": "CrackTree260/gt/DSCN6771.bmp",
+      "group": "DSCN_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6772.JPG",
+      "mask": "CrackTree260/gt/DSCN6772.bmp",
+      "group": "DSCN_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6773.JPG",
+      "mask": "CrackTree260/gt/DSCN6773.bmp",
+      "group": "DSCN_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6775.JPG",
+      "mask": "CrackTree260/gt/DSCN6775.bmp",
+      "group": "DSCN_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6776.JPG",
+      "mask": "CrackTree260/gt/DSCN6776.bmp",
+      "group": "DSCN_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6777.JPG",
+      "mask": "CrackTree260/gt/DSCN6777.bmp",
+      "group": "DSCN_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6778.JPG",
+      "mask": "CrackTree260/gt/DSCN6778.bmp",
+      "group": "DSCN_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6780.JPG",
+      "mask": "CrackTree260/gt/DSCN6780.bmp",
+      "group": "DSCN_678x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6781.JPG",
+      "mask": "CrackTree260/gt/DSCN6781.bmp",
+      "group": "DSCN_678x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6782.JPG",
+      "mask": "CrackTree260/gt/DSCN6782.bmp",
+      "group": "DSCN_678x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6783.JPG",
+      "mask": "CrackTree260/gt/DSCN6783.bmp",
+      "group": "DSCN_678x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6784.JPG",
+      "mask": "CrackTree260/gt/DSCN6784.bmp",
+      "group": "DSCN_678x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6785.JPG",
+      "mask": "CrackTree260/gt/DSCN6785.bmp",
+      "group": "DSCN_678x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6786.JPG",
+      "mask": "CrackTree260/gt/DSCN6786.bmp",
+      "group": "DSCN_678x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3552.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3552.bmp",
+      "group": "LIU_355x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3554.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3554.bmp",
+      "group": "LIU_355x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3554a.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3554a.bmp",
+      "group": "LIU_355x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3560.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3560.bmp",
+      "group": "LIU_356x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3560a.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3560a.bmp",
+      "group": "LIU_356x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3563.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3563.bmp",
+      "group": "LIU_356x"
+    }
+  ],
+  "validation": [
+    {
+      "image": "CrackTree260/CrackTree260/6290.jpg",
+      "mask": "CrackTree260/gt/6290.bmp",
+      "group": "NUM_629x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6291.jpg",
+      "mask": "CrackTree260/gt/6291.bmp",
+      "group": "NUM_629x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6292.jpg",
+      "mask": "CrackTree260/gt/6292.bmp",
+      "group": "NUM_629x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6293.jpg",
+      "mask": "CrackTree260/gt/6293.bmp",
+      "group": "NUM_629x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6294.jpg",
+      "mask": "CrackTree260/gt/6294.bmp",
+      "group": "NUM_629x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6296.jpg",
+      "mask": "CrackTree260/gt/6296.bmp",
+      "group": "NUM_629x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6297.jpg",
+      "mask": "CrackTree260/gt/6297.bmp",
+      "group": "NUM_629x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6298.jpg",
+      "mask": "CrackTree260/gt/6298.bmp",
+      "group": "NUM_629x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6592.jpg",
+      "mask": "CrackTree260/gt/6592.bmp",
+      "group": "NUM_659x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6596.jpg",
+      "mask": "CrackTree260/gt/6596.bmp",
+      "group": "NUM_659x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6599.jpg",
+      "mask": "CrackTree260/gt/6599.bmp",
+      "group": "NUM_659x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6611.jpg",
+      "mask": "CrackTree260/gt/6611.bmp",
+      "group": "NUM_661x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6616.jpg",
+      "mask": "CrackTree260/gt/6616.bmp",
+      "group": "NUM_661x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6619.jpg",
+      "mask": "CrackTree260/gt/6619.bmp",
+      "group": "NUM_661x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6653.jpg",
+      "mask": "CrackTree260/gt/6653.bmp",
+      "group": "NUM_665x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6654.jpg",
+      "mask": "CrackTree260/gt/6654.bmp",
+      "group": "NUM_665x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6655.jpg",
+      "mask": "CrackTree260/gt/6655.bmp",
+      "group": "NUM_665x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6658.jpg",
+      "mask": "CrackTree260/gt/6658.bmp",
+      "group": "NUM_665x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6659.jpg",
+      "mask": "CrackTree260/gt/6659.bmp",
+      "group": "NUM_665x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6664.jpg",
+      "mask": "CrackTree260/gt/6664.bmp",
+      "group": "NUM_666x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6706.jpg",
+      "mask": "CrackTree260/gt/6706.bmp",
+      "group": "NUM_670x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6707.jpg",
+      "mask": "CrackTree260/gt/6707.bmp",
+      "group": "NUM_670x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6708.jpg",
+      "mask": "CrackTree260/gt/6708.bmp",
+      "group": "NUM_670x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6709.jpg",
+      "mask": "CrackTree260/gt/6709.bmp",
+      "group": "NUM_670x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6730.jpg",
+      "mask": "CrackTree260/gt/6730.bmp",
+      "group": "NUM_673x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6731.jpg",
+      "mask": "CrackTree260/gt/6731.bmp",
+      "group": "NUM_673x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6732.jpg",
+      "mask": "CrackTree260/gt/6732.bmp",
+      "group": "NUM_673x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6733.jpg",
+      "mask": "CrackTree260/gt/6733.bmp",
+      "group": "NUM_673x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6750.jpg",
+      "mask": "CrackTree260/gt/6750.bmp",
+      "group": "NUM_675x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6753.jpg",
+      "mask": "CrackTree260/gt/6753.bmp",
+      "group": "NUM_675x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6754.jpg",
+      "mask": "CrackTree260/gt/6754.bmp",
+      "group": "NUM_675x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6428.JPG",
+      "mask": "CrackTree260/gt/DSCN6428.bmp",
+      "group": "DSCN_642x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6429.JPG",
+      "mask": "CrackTree260/gt/DSCN6429.bmp",
+      "group": "DSCN_642x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6450.JPG",
+      "mask": "CrackTree260/gt/DSCN6450.bmp",
+      "group": "DSCN_645x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6452.JPG",
+      "mask": "CrackTree260/gt/DSCN6452.bmp",
+      "group": "DSCN_645x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6453.JPG",
+      "mask": "CrackTree260/gt/DSCN6453.bmp",
+      "group": "DSCN_645x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6455.JPG",
+      "mask": "CrackTree260/gt/DSCN6455.bmp",
+      "group": "DSCN_645x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6473.JPG",
+      "mask": "CrackTree260/gt/DSCN6473.bmp",
+      "group": "DSCN_647x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3539.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3539.bmp",
+      "group": "LIU_353x"
+    }
+  ],
+  "test": [
+    {
+      "image": "CrackTree260/CrackTree260/6300.jpg",
+      "mask": "CrackTree260/gt/6300.bmp",
+      "group": "NUM_630x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6301.jpg",
+      "mask": "CrackTree260/gt/6301.bmp",
+      "group": "NUM_630x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6302.jpg",
+      "mask": "CrackTree260/gt/6302.bmp",
+      "group": "NUM_630x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6303.jpg",
+      "mask": "CrackTree260/gt/6303.bmp",
+      "group": "NUM_630x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6304.jpg",
+      "mask": "CrackTree260/gt/6304.bmp",
+      "group": "NUM_630x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6306.jpg",
+      "mask": "CrackTree260/gt/6306.bmp",
+      "group": "NUM_630x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6307.jpg",
+      "mask": "CrackTree260/gt/6307.bmp",
+      "group": "NUM_630x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6308.jpg",
+      "mask": "CrackTree260/gt/6308.bmp",
+      "group": "NUM_630x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6309.jpg",
+      "mask": "CrackTree260/gt/6309.bmp",
+      "group": "NUM_630x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6340.jpg",
+      "mask": "CrackTree260/gt/6340.bmp",
+      "group": "NUM_634x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6344.jpg",
+      "mask": "CrackTree260/gt/6344.bmp",
+      "group": "NUM_634x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6349.jpg",
+      "mask": "CrackTree260/gt/6349.bmp",
+      "group": "NUM_634x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6351.jpg",
+      "mask": "CrackTree260/gt/6351.bmp",
+      "group": "NUM_635x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6353.jpg",
+      "mask": "CrackTree260/gt/6353.bmp",
+      "group": "NUM_635x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6355.jpg",
+      "mask": "CrackTree260/gt/6355.bmp",
+      "group": "NUM_635x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6356.jpg",
+      "mask": "CrackTree260/gt/6356.bmp",
+      "group": "NUM_635x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6357.jpg",
+      "mask": "CrackTree260/gt/6357.bmp",
+      "group": "NUM_635x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6358.jpg",
+      "mask": "CrackTree260/gt/6358.bmp",
+      "group": "NUM_635x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6581.jpg",
+      "mask": "CrackTree260/gt/6581.bmp",
+      "group": "NUM_658x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6583.jpg",
+      "mask": "CrackTree260/gt/6583.bmp",
+      "group": "NUM_658x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6584.jpg",
+      "mask": "CrackTree260/gt/6584.bmp",
+      "group": "NUM_658x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6601.jpg",
+      "mask": "CrackTree260/gt/6601.bmp",
+      "group": "NUM_660x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6609.jpg",
+      "mask": "CrackTree260/gt/6609.bmp",
+      "group": "NUM_660x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6633.jpg",
+      "mask": "CrackTree260/gt/6633.bmp",
+      "group": "NUM_663x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6635.jpg",
+      "mask": "CrackTree260/gt/6635.bmp",
+      "group": "NUM_663x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6637.jpg",
+      "mask": "CrackTree260/gt/6637.bmp",
+      "group": "NUM_663x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6638.jpg",
+      "mask": "CrackTree260/gt/6638.bmp",
+      "group": "NUM_663x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6774.jpg",
+      "mask": "CrackTree260/gt/6774.bmp",
+      "group": "NUM_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/6779.jpg",
+      "mask": "CrackTree260/gt/6779.bmp",
+      "group": "NUM_677x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6430.JPG",
+      "mask": "CrackTree260/gt/DSCN6430.bmp",
+      "group": "DSCN_643x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6431.JPG",
+      "mask": "CrackTree260/gt/DSCN6431.bmp",
+      "group": "DSCN_643x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6432.JPG",
+      "mask": "CrackTree260/gt/DSCN6432.bmp",
+      "group": "DSCN_643x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6434.JPG",
+      "mask": "CrackTree260/gt/DSCN6434.bmp",
+      "group": "DSCN_643x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6436.JPG",
+      "mask": "CrackTree260/gt/DSCN6436.bmp",
+      "group": "DSCN_643x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6437.JPG",
+      "mask": "CrackTree260/gt/DSCN6437.bmp",
+      "group": "DSCN_643x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/DSCN6439.JPG",
+      "mask": "CrackTree260/gt/DSCN6439.bmp",
+      "group": "DSCN_643x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3540.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3540.bmp",
+      "group": "LIU_354x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3541.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3541.bmp",
+      "group": "LIU_354x"
+    },
+    {
+      "image": "CrackTree260/CrackTree260/LiuHuan_SXX_3547.jpg",
+      "mask": "CrackTree260/gt/LiuHuan_SXX_3547.bmp",
+      "group": "LIU_354x"
+    }
+  ]
+}
