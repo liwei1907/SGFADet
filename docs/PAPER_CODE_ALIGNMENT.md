@@ -12,7 +12,7 @@ This document maps the revised manuscript to the executable implementation. The 
 4. SAF performs gated cross-guidance and retains an RGB residual path.
 5. The PAN/FPN-style neck aggregates top-down and bottom-up features.
 6. ATAH forms semantic and geometry-aligned features, then predicts a dense crack logit.
-7. Four side logits provide deep supervision; they are not used as replacements for the main logit.
+7. Four side logits provide deep supervision and participate in the v2 learned main-logit fusion.
 
 ## Equations
 
@@ -24,8 +24,8 @@ This document maps the revised manuscript to the executable implementation. The 
 | (6) | `SFC.branch1`, `SFC.branch2` | complementary feature bases |
 | (7)-(8) | `SFC.forward`, `SFC.statistical_gate`, `SFC.scale` | average/maximum evidence and branch-specific gates |
 | (9)-(10) | `SFC.forward`, `SFC.out` | gated branches, residual aggregation, 3 x 3 projection |
-| (11) | `ATAH.shared` | shared Conv-GN-SiLU feature stem |
-| (12) | `SemanticAlignment` | channel and spatial semantic alignment |
+| (11) | `ATAH.shared` | checkpoint-compatible v2 Conv-BN-SiLU feature stem |
+| (12) | `TaskAwareModulator`, `ATAH.semantic_spatial` | channel and spatial semantic alignment |
 | (13) | `GeometryAlignment` | learned DCNv2 offsets, masks, and deformable sampling |
 | (14) | `ATAH.fuse` | semantic/geometry concatenation and dense prediction |
 | (15) | `losses.sgfadet_loss` | main + 0.20 semantic + 0.10 boundary + 0.15 mean of four side terms |
@@ -41,6 +41,10 @@ The default constructor is `SGFADet(variant="full", fusion_stages="345", backbon
 - zero, online-frozen, and last-stage-fine-tuned MobileSAM controls.
 
 `train.py` writes every selected variant into `config.json`, preventing a control run from being reported as the complete model.
+
+## Wording that must remain checkpoint-compatible
+
+The uploaded v2 implementation is the numerical authority for the reported, already-completed runs. It uses BatchNorm in the ATAH shared `Conv` blocks, an EMA warm-up ramp capped at 0.999, and seeded but non-bitwise-deterministic CUDA/cuDNN execution in `run_matrix.py`. These details must not be changed to GroupNorm, constant-from-step-one EMA, or deterministic kernels without retraining and re-benchmarking. Clarify any conflicting manuscript shorthand before final submission.
 
 ## Evaluation contract
 

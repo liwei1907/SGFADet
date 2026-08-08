@@ -14,7 +14,7 @@ The code in this branch supersedes the earlier Ultralytics prototype. It does no
 | SFC, Eqs. (6)-(10) | `sgfadet.py`: `SFC` |
 | SAF at P3/P4/P5, Eqs. (1)-(5) | `sgfadet.py`: `SAF`, `SGFADet.saf3/saf4/saf5` |
 | Frozen MobileSAM TinyViT semantic prior | `precompute_sam.py`, `sam_adapter.py` |
-| ATAH, Eqs. (11)-(14) | `sgfadet.py`: `ATAH`, `SemanticAlignment`, `GeometryAlignment` |
+| ATAH, Eqs. (11)-(14) | `sgfadet.py`: `ATAH`, `TaskAwareModulator`, `GeometryAlignment` |
 | Main, semantic, boundary, and four side-output losses, Eq. (15) | `losses.py`: `sgfadet_loss` |
 | Fixed grouped train/validation/test protocol | `splits/*.json`, `segmentation_common.py`, `audit_splits.py` |
 | Five-seed training and validation-only selection | `run_matrix.py`, `train.py`, `aggregate_runs.py` |
@@ -133,12 +133,13 @@ python run_matrix.py \
 Frozen defaults:
 
 - seeds: 42, 123, 3407, 2025, 2026;
+- the v2 matrix seeds every run but retains its original non-bitwise-deterministic CUDA/cuDNN execution; uncertainty is reported across five runs;
 - input: 640 x 640; batch size: 6; evaluation batch size: 4;
 - 200 epochs; AdamW; initial learning rate 5e-4; weight decay 3e-5;
 - five warm-up epochs, cosine decay, gradient-norm clipping at 5;
 - mean of class-balanced BCE and Dice for every segmentation term;
 - loss weights: semantic 0.20, boundary 0.10, four-side-output mean 0.15;
-- EMA decay 0.999; fixed threshold 0.5;
+- maximum EMA decay 0.999 with the v2 warm-up ramp; fixed threshold 0.5;
 - checkpoint selected exclusively by validation mIoU; test evaluated once after selection.
 
 For one dataset and seed, call `train.py` directly. Run `python train.py --help` for every option.
@@ -232,6 +233,10 @@ CUDA is required for the declared 640 x 640 training and benchmark protocol.
 ## Checkpoints, logs, and provenance
 
 Model weights, datasets, and local run directories are intentionally excluded from Git. A publication release should attach the five selected checkpoints per dataset, `epoch_metrics.csv`, `config.json`, `final_metrics.json`, split-audit reports, and aggregate summaries as release assets or in an archival record. Every generated configuration records the split SHA-256, seed, runtime, parameter count, and validation/test policy.
+
+### Checkpoint-compatibility note
+
+The numerical model and training path are intentionally kept compatible with the uploaded v2 source because the revised results were not retrained. In particular, the released ATAH stem uses the v2 `Conv` block (Conv-BN-SiLU), EMA uses a warm-up ramp whose configured maximum is 0.999, and `run_matrix.py` retains the seeded but non-bitwise-deterministic CUDA setting used for the reported runs. If a manuscript draft states GroupNorm, constant-from-step-one EMA, or bitwise deterministic training, correct that wording or retrain before changing these settings; silently changing them would invalidate checkpoint compatibility and the reported results.
 
 ## Citation
 

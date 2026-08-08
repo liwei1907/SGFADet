@@ -66,6 +66,7 @@ def main() -> None:
                 "--save-every", "25",
                 "--resume",
                 "--keep-resume-checkpoint",
+                "--nondeterministic",
             ]
             if args.resnet34_init:
                 command.extend(["--resnet34-init", args.resnet34_init])

@@ -79,6 +79,7 @@ def main() -> None:
             "--save-every", "25",
             "--resume",
             "--keep-resume-checkpoint",
+            "--nondeterministic",
         ]
         print(f"[extended {index}/{len(tasks)}] starting {control['name']} on {dataset}", flush=True)
         subprocess.run(command, check=True, cwd=PROJECT)

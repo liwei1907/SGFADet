@@ -24,9 +24,11 @@
   "schedule": "cosine",
   "gradient_clip_norm": 5.0,
   "ema_decay": 0.999,
+  "ema_policy": "exponential warm-up ramp to the configured maximum decay",
   "threshold": 0.5,
   "selection_metric": "validation mIoU",
   "seeds": [42, 123, 3407, 2025, 2026],
+  "bitwise_deterministic_cuda": false,
   "loss": {
     "segmentation_term": "mean(class-balanced BCE, Dice)",
     "semantic_weight": 0.2,

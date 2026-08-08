@@ -23,19 +23,6 @@ class Conv(nn.Sequential):
         super().__init__(*layers)
 
 
-class ConvGN(nn.Sequential):
-    """Convolution, group normalization, and SiLU used by ATAH."""
-
-    def __init__(self, c1, c2, k=3, s=1, groups=8):
-        if c2 % groups:
-            raise ValueError(f"GroupNorm groups={groups} must divide channels={c2}")
-        super().__init__(
-            nn.Conv2d(c1, c2, k, s, k // 2, bias=False),
-            nn.GroupNorm(groups, c2),
-            nn.SiLU(inplace=True),
-        )
-
-
 class Bottleneck(nn.Module):
     def __init__(self, channels, shortcut=True):
         super().__init__()
@@ -71,7 +58,7 @@ class SFC(nn.Module):
         self.branch1 = Conv(channels, channels, 1)
         self.branch2 = Conv(channels, channels, 1)
         hidden = max(16, channels // reduction)
-        self.statistical_gate = nn.Sequential(
+        self.spatial_gate = nn.Sequential(
             nn.Conv2d(channels * 4, channels * 2, 1, bias=True),
             nn.Sigmoid(),
         )
@@ -88,7 +75,7 @@ class SFC(nn.Module):
         joined = torch.cat((f1, f2), dim=1)
         avg = F.adaptive_avg_pool2d(joined, 1)
         maximum = F.adaptive_max_pool2d(joined, 1)
-        w1, w2 = self.statistical_gate(torch.cat((avg, maximum), dim=1)).chunk(2, dim=1)
+        w1, w2 = self.spatial_gate(torch.cat((avg, maximum), dim=1)).chunk(2, dim=1)
         s1, s2 = self.scale(avg).chunk(2, dim=1)
         return self.out(f1 * w1 * s1 + f2 * w2 * s2 + x)
 
@@ -207,30 +194,25 @@ class ConcatFusion(nn.Module):
         return self.out(torch.cat((rgb, self.sam_project(sam)), dim=1))
 
 
-class SemanticAlignment(nn.Module):
-    """Channel and spatial semantic alignment from Eq. (12)."""
+class TaskAwareModulator(nn.Module):
+    """Joint average/max-pooling channel modulation used by both ATAH tasks."""
 
     def __init__(self, channels, reduction=8):
         super().__init__()
         hidden = max(16, channels // reduction)
-        self.channel_mlp = nn.Sequential(
+        self.mlp = nn.Sequential(
             nn.Conv2d(channels, hidden, 1),
             nn.SiLU(inplace=True),
             nn.Conv2d(hidden, channels, 1),
         )
-        self.spatial_gate = nn.Conv2d(2, 1, 7, padding=3)
+        self.out = Conv(channels, channels, 3)
 
     def forward(self, x):
-        channel_gate = torch.sigmoid(
-            self.channel_mlp(F.adaptive_avg_pool2d(x, 1))
-            + self.channel_mlp(F.adaptive_max_pool2d(x, 1))
+        gate = torch.sigmoid(
+            self.mlp(F.adaptive_avg_pool2d(x, 1))
+            + self.mlp(F.adaptive_max_pool2d(x, 1))
         )
-        aligned = x * channel_gate
-        descriptor = torch.cat(
-            (aligned.mean(dim=1, keepdim=True), aligned.amax(dim=1, keepdim=True)),
-            dim=1,
-        )
-        return aligned * torch.sigmoid(self.spatial_gate(descriptor))
+        return self.out(x * gate + x)
 
 
 class GeometryAlignment(nn.Module):
@@ -249,8 +231,8 @@ class GeometryAlignment(nn.Module):
     def forward(self, x):
         values = self.offset_mask(x)
         offset, mask = values[:, :18], values[:, 18:].sigmoid()
-        # Deformable sampling is kept in fp32 for numerical stability.
-        with torch.autocast(device_type=x.device.type, enabled=False):
+        # torchvision's CUDA deformable convolution is kept in fp32 for stability.
+        with torch.cuda.amp.autocast(enabled=False):
             y = self.deform(x.float(), offset.float(), mask.float())
             y = self.project(y)
         return self.act(self.norm(y))
@@ -261,8 +243,10 @@ class ATAH(nn.Module):
 
     def __init__(self, channels, deformable=True):
         super().__init__()
-        self.shared = nn.Sequential(ConvGN(channels, channels, 3), ConvGN(channels, channels, 3))
-        self.semantic_alignment = SemanticAlignment(channels)
+        self.shared = nn.Sequential(Conv(channels, channels, 3), Conv(channels, channels, 3))
+        self.semantic_mod = TaskAwareModulator(channels)
+        self.semantic_spatial = nn.Sequential(nn.Conv2d(channels, 1, 7, padding=3), nn.Sigmoid())
+        self.boundary_mod = TaskAwareModulator(channels)
         self.geometry = GeometryAlignment(channels) if deformable else nn.Sequential(
             Conv(channels, channels, 3, g=channels), Conv(channels, channels, 1)
         )
@@ -272,8 +256,9 @@ class ATAH(nn.Module):
 
     def forward(self, x):
         shared = self.shared(x)
-        semantic = self.semantic_alignment(shared)
-        boundary = self.geometry(shared)
+        semantic = self.semantic_mod(shared)
+        semantic = semantic * self.semantic_spatial(semantic) + semantic
+        boundary = self.geometry(self.boundary_mod(shared))
         return self.fuse(torch.cat((semantic, boundary), dim=1)), self.semantic_head(semantic), self.boundary_head(boundary)
 
 
@@ -389,6 +374,10 @@ class SGFADet(nn.Module):
         self.side3 = nn.Conv2d(128, 1, 1)
         self.side4 = nn.Conv2d(256, 1, 1)
         self.side5 = nn.Conv2d(384, 1, 1)
+        self.side_fuse = nn.Conv2d(5, 1, 1)
+        with torch.no_grad():
+            self.side_fuse.weight.copy_(torch.tensor([0.60, 0.15, 0.10, 0.08, 0.07]).view(1, 5, 1, 1))
+            self.side_fuse.bias.zero_()
 
     def forward(self, image, sam_prior):
         input_size = image.shape[-2:]
@@ -442,4 +431,5 @@ class SGFADet(nn.Module):
             F.interpolate(layer(feature).float(), size=input_size, mode="bilinear", align_corners=False)
             for layer, feature in ((self.side_stem, stem_detail), (self.side3, p3), (self.side4, p4), (self.side5, p5))
         ]
-        return {"logits": refined.float(), "semantic": semantic, "boundary": boundary, "sides": sides}
+        logits = self.side_fuse(torch.cat((refined.float(), *sides), dim=1))
+        return {"logits": logits.float(), "semantic": semantic, "boundary": boundary, "sides": sides}

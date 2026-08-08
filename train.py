@@ -113,8 +113,8 @@ class ModelEMA:
             parameter.requires_grad_(False)
 
     @torch.no_grad()
-    def update(self, model: torch.nn.Module, _updates: int) -> None:
-        decay = self.decay
+    def update(self, model: torch.nn.Module, updates: int) -> None:
+        decay = self.decay * (1.0 - math.exp(-updates / 2000.0))
         source = model.state_dict()
         for key, value in self.model.state_dict().items():
             if value.dtype.is_floating_point:
@@ -290,7 +290,7 @@ def train_dataset(args, dataset_name: str, device: torch.device) -> dict:
         "schedule_epochs": args.schedule_epochs or args.epochs,
         "loss": loss_kwargs,
         "ema_decay": args.ema_decay,
-        "ema_policy": "constant decay",
+        "ema_policy": "exponential warm-up ramp to the configured maximum decay",
         "selection_metric": args.selection_metric,
         "evaluation_threshold": 0.5,
         "seed": args.seed,
